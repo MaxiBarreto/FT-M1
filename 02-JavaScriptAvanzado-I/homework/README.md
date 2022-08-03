@@ -151,7 +151,7 @@ console.log(obj.prop.getFullname()); //Aurelio De Rosa
 
 var test = obj.prop.getFullname;
 
-console.log(test());
+console.log(test()); //Undefined
 ```
 
 ### Event loop
@@ -160,11 +160,11 @@ Considerando el siguiente código, ¿Cuál sería el orden en el que se muestra 
 
 ```javascript
 function printing() {
-   console.log(1);
+   console.log(1); // 1
    setTimeout(function() { console.log(2); }, 1000);
    setTimeout(function() { console.log(3); }, 0);
    console.log(4);
 }
 
-printing();
+printing(); // 1 4 3 2
 ```
